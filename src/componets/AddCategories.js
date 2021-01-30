@@ -14,7 +14,7 @@ export const AddCategories = ({setcategories}) => {
         e.preventDefault();
 
         if (inputValue.trim().length>2) {
-            setcategories(cats =>([...cats, inputValue]));
+            setcategories(cats =>([ inputValue, ...cats]));
             setinputValue('')    ;
         }
 
@@ -30,7 +30,7 @@ export const AddCategories = ({setcategories}) => {
                     onChange={ (e)=>{
                         handleInputChange(e);
                     }}
-                />s
+                />
             </form>
        
     )
